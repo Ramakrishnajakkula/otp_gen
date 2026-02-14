@@ -2,6 +2,29 @@
 
 Passwordless authentication prototype built with Expo + React Native. Users request a 6-digit OTP over email, validate it locally, then land on a live session screen with a resilient timer and analytics logging powered by AsyncStorage.
 
+## Getting Started
+Follow these steps to clone the repository and launch the Expo development server locally:
+
+1. **Clone the repo**
+  ```bash
+  git clone https://github.com/Ramakrishnajakkula/otp_gen.git
+  cd otp_gen/secure-auth-app
+  ```
+2. **Install dependencies** (Node 18+ recommended)
+  ```bash
+  npm install
+  ```
+3. **Run the Expo dev server** (starts Metro + provides QR / platform options)
+  ```bash
+  npx expo start
+  ```
+4. **Launch on a device or simulator**
+  - Scan the QR code with Expo Go on iOS/Android
+  - Press `a` for Android emulator or `i` for iOS simulator
+  - Press `w` to open the web build in your browser
+
+If you run into cache issues, stop the server and rerun `npx expo start -c`.
+
 ## Features
 - Email + OTP flow with local generation, expiry (60s), max attempt guardrails (3 strikes), and a modern six-box OTP input that prevents copy/paste spam.
 - OTPs stored per email via an in-memory map, guaranteeing true multi-user isolation.
